@@ -1,0 +1,72 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-secondary: var(--font-poppins);
+
+  --color-primary: #0095e4;
+  --color-primary-10: #000f17;
+  --color-primary-15: #001622;
+  --color-primary-20: #001e2e;
+  --color-primary-30: #002d44;
+
+  --color-neutral-light: #ffffff;
+  --color-neutral-medium: #c8c8c8;
+  --color-neutral-dark: #89919b;
+  --color-neutral-darker: #8a939d;
+  --color-skeleton: #f5f5f5;
+
+  --color-success: #3aaa29;
+  --color-warning: #f04d1a;
+  --color-caution: #ffd13f;
+}
+
+@layer {
+  /* GOOGLE MAPS RESETERS */
+  a[title="Open this area in Google Maps (opens a new window)"] {
+    display: none !important;
+  }
+  .gm-style-iw-ch {
+    display: none !important;
+  }
+
+  .gm-style-iw-d {
+    background: var(--color-primary-10) !important;
+    overflow: hidden !important;
+  }
+
+  .gm-style .gm-style-iw-tc::after {
+    background: var(--color-primary-30) !important;
+  }
+
+  .gm-style-iw.gm-style-iw-c {
+    background: var(--color-primary-15) !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+  }
+
+  .gm-ui-hover-effect {
+    display: none !important;
+  }
+
+  /* SCROLLBAR */
+  .custom-scrollbar::-webkit-scrollbar {
+    background-color: transparent;
+    border: 1px solid var(--color-neutral-darker);
+    border-radius: 8px;
+    width: 12px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary-30);
+    height: 4rem;
+    border-radius: 8px;
+    border: 4px solid transparent;
+    background-clip: padding-box;
+  }
+}
