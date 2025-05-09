@@ -52,10 +52,9 @@
 
   /* SCROLLBAR */
   .custom-scrollbar::-webkit-scrollbar {
-    background-color: transparent;
-    border: 1px solid var(--color-neutral-darker);
+    background-color: var(--color-primary-15);
     border-radius: 8px;
-    width: 12px;
+    width: 20px;
   }
 
   .custom-scrollbar::-webkit-scrollbar-track {

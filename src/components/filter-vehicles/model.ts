@@ -49,6 +49,10 @@ export function useFilterVehiclesModel() {
   }, [watch, router, getSearchParams]);
 
   const onSubmit = handleSubmit((data) => {
+    if (!data.filter) {
+      return;
+    }
+
     const params = formatQueryParams({
       filter: data.filter,
       type: getSearchParams().type,

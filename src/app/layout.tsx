@@ -30,7 +30,7 @@ interface IRootLayoutProps {
 
 export default function RootLayout({ children }: IRootLayoutProps) {
   return (
-    <html lang="en">
+    <html lang="en" className="custom-scrollbar">
       <body
         suppressHydrationWarning
         className={cn(

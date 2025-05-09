@@ -15,14 +15,20 @@ import {
 } from "../ui/table";
 
 import { useVehiclesTableModel } from "./model";
+import { VehiclesTableSkeleton } from "./skeleton";
 
 type VehiclesTableViewProps = ReturnType<typeof useVehiclesTableModel>;
 
 export function VehiclesTableView({
   isFetchingNextPage,
   ref,
+  isLoading,
   vehicles,
 }: VehiclesTableViewProps) {
+  if (isLoading) {
+    return <VehiclesTableSkeleton />;
+  }
+
   return (
     <div className="w-full flex flex-col gap-4">
       <Table>
@@ -35,6 +41,7 @@ export function VehiclesTableView({
             <TableHead>Status</TableHead>
           </TableRow>
         </TableHeader>
+
         <TableBody>
           {vehicles.map((vehicle) => (
             <TableRow key={vehicle.id}>
