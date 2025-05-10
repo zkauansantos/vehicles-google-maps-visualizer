@@ -33,10 +33,14 @@ export function useFilterVehiclesModel() {
 
   useEffect(() => {
     const { unsubscribe } = watch((fieldValues, { name }) => {
-      if (name === "type") {
+      const oldType = getSearchParams().type;
+      const newType = fieldValues.type;
+      const isTypeFilter = name === "filter" && newType !== oldType;
+
+      if (isTypeFilter) {
         const params = formatQueryParams({
           filter: getSearchParams().filter,
-          type: fieldValues.type,
+          type: newType,
         });
 
         router.replace(`${params}`);

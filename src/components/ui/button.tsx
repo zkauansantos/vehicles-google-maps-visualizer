@@ -1,15 +1,10 @@
-import { Slot } from "@radix-ui/react-slot";
 import { ComponentProps, forwardRef } from "react";
 
 import { cn } from "@/utils/cn";
 
-interface IButtonProps extends ComponentProps<"button"> {
-  asChild?: boolean;
-}
-
-export const Button = forwardRef<HTMLButtonElement, IButtonProps>(
-  ({ className, type, asChild, ...props }, ref) => {
-    const Comp = asChild ? Slot : "button";
+export const Button = forwardRef<HTMLButtonElement, ComponentProps<"button">>(
+  ({ className, type, ...props }, ref) => {
+    const Comp = "button";
 
     return (
       <Comp
@@ -26,4 +21,5 @@ export const Button = forwardRef<HTMLButtonElement, IButtonProps>(
     );
   },
 );
+
 Button.displayName = "Button";

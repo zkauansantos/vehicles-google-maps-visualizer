@@ -18,6 +18,7 @@ export function FilterVehiclesView({
 }: FilterVehiclesViewProps) {
   return (
     <form
+      data-testid="form"
       onSubmit={onSubmit}
       className="flex items-start lg:items-center gap-6 flex-col lg:flex-row justify-between mb-2"
     >
