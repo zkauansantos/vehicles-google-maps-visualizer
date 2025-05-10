@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 import { IGetAllVehiclesResponse } from "@/interfaces/api.response";
 import { httpServer } from "@/services/httpServer";
@@ -6,8 +6,8 @@ import { formatQueryParams } from "@/utils/formatters";
 
 import { VehiclesMapper } from "./mapper";
 
-export async function GET(request: Request) {
-  const { searchParams } = new URL(request.url);
+export async function GET(request: NextRequest) {
+  const { searchParams } = request.nextUrl;
 
   const params = formatQueryParams({
     page: searchParams.get("page"),

@@ -8,6 +8,7 @@ const createJestConfig = nextJest({
 const config: Config = {
   coverageProvider: "v8",
   testEnvironment: "jsdom",
+
   moduleNameMapper: {
     "^@/components/(.*)$": "<rootDir>/src/components/$1",
     "^@/app/(.*)$": "<rootDir>/src/app/$1",
@@ -17,8 +18,17 @@ const config: Config = {
     "^@/services/(.*)$": "<rootDir>/src/services/$1",
     "^@/entities/(.*)$": "<rootDir>/src/entities/$1",
   },
+
   testMatch: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
+
+  collectCoverageFrom: ["src/**/*.{js,jsx,ts,tsx}"],
+  coveragePathIgnorePatterns: [
+    "src/interfaces/*",
+    "src/entities/*",
+    "src/components/ui/*",
+    "src/config/*",
+  ],
 };
 
 export default createJestConfig(config);
