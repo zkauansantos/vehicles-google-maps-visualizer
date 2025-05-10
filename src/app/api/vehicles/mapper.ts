@@ -2,6 +2,7 @@
 
 import { IGetAllVehiclesResponse } from "@/interfaces/api.response";
 
+// this mapper is used because api returns duplicated vehicles
 export class VehiclesMapper {
   static toDomain(response: IGetAllVehiclesResponse): IGetAllVehiclesResponse {
     const vehicles = this.removeDuplicatesByKey(
