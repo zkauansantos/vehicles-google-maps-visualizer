@@ -65,7 +65,9 @@ export function VehiclesTableView({
             "opacity-100 border border-primary-30 bg-primary-15 mx-auto mb-4 px-3 py-2 rounded-lg text-neutral-dark flex items-center gap-2",
         )}
       >
-        <Loader2Icon className="animate-spin" />
+        {isFetchingNextPage && (
+          <Loader2Icon className="animate-spin" data-testid="loading-icon" />
+        )}
       </div>
     </div>
   );
