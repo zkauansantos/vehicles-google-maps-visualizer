@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
 
+import { IGetAllVehiclesResponse } from "@/interfaces/api.response";
 import { httpServer } from "@/services/httpServer";
 import { formatQueryParams } from "@/utils/formatters";
 
 import { VehiclesMapper } from "./mapper";
-import { IGetAllVehiclesResponse } from "./types";
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);

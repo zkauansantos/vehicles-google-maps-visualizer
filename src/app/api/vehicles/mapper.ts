@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { IGetAllVehiclesResponse } from "./types";
+
+import { IGetAllVehiclesResponse } from "@/interfaces/api.response";
 
 export class VehiclesMapper {
   static toDomain(response: IGetAllVehiclesResponse): IGetAllVehiclesResponse {

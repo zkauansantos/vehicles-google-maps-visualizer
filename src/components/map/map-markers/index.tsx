@@ -3,7 +3,7 @@
 import { AdvancedMarker, InfoWindow } from "@vis.gl/react-google-maps";
 import Link from "next/link";
 
-import { PinMarkerTruck } from "@/app/assets/icons/pin-marker-truck";
+import { PinMarkerTruck } from "@/assets/icons/pin-marker-truck";
 import type { IVehicleTracked } from "@/entities/IVehicle";
 import { cn } from "@/utils/cn";
 import { formatDate, formatVehiclePlate } from "@/utils/formatters";

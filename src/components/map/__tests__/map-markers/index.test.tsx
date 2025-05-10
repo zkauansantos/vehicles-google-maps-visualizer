@@ -30,7 +30,7 @@ jest.mock("@vis.gl/react-google-maps", () => ({
   ),
 }));
 
-jest.mock("@/app/assets/icons/pin-marker-truck", () => ({
+jest.mock("../../../../assets/icons/pin-marker-truck", () => ({
   PinMarkerTruck: () => <div data-testid="pin-marker-truck">🚚</div>,
 }));
 

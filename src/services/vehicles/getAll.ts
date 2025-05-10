@@ -1,5 +1,5 @@
-import { IGetAllVehiclesResponse } from "@/app/api/vehicles/types";
 import { DEFAULT_PAGINATION_LIMIT } from "@/constants/default-pagination-limit";
+import { IGetAllVehiclesResponse } from "@/interfaces/api.response";
 import { formatQueryParams } from "@/utils/formatters";
 
 import { httpClient } from "../httpClient";

@@ -1,4 +1,4 @@
-import { vehiclesService } from "../index";
+import { vehiclesService } from "..";
 
 jest.mock("../getAll", () => ({
   getAll: jest.fn(),
