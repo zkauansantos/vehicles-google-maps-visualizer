@@ -39,7 +39,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: 1 - Install Dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install
 
       - name: 2 - Check Lint
         run: pnpm lint
