@@ -46,3 +46,8 @@ jobs:
 
       - name: 3 - Check Tests
         run: pnpm test
+        env:
+          API_URL: "http://localhost:3000"
+          TOKEN_API_KEY: "example-token"
+          NEXT_PUBLIC_GOOGLE_MAPS_API_KEY: "example-key"
+          NEXT_PUBLIC_GOOGLE_MAPS_MAP_ID: "example-id"
