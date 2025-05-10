@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Teste Fullstack Control 361
 
-## Getting Started
+Teste desenvolvido para vaga fullstack na Control 361
 
-First, run the development server:
+## Deploy
+
+Para visualizar esse projeto acesse:
+
+📍 <a href="#" target="_blank" > Teste Fullstack Control 361 - Kauan Santos</a>
+
+# Layout
+
+## Loading
+
+[<img src="./public/screens/loading.png"/>]()
+
+## Default
+[<img src="./public/screens/default.png"/>]()
+
+## Com filtro
+[<img src="./public/screens/filter.png"/>]()
+
+## Detalhes do Veículo
+[<img src="./public/screens/vehicle-details.png"/>]()
+
+
+## Requisitos
+
+- ✅ O mapa deve apresentar todos os veiculos simultaneamente e ser atualizada a cada 2 minutos automáticamente.
+
+- ✅ A lista deve carregar 20 veiculos e ter um carrossel infinito que carrega mais veiculos sempre que scrolamos até o final da lista.
+
+- ✅ Ao clicar em um veiculo da tela, apresentar os detalhes do veiculo.
+
+- ✅ Entre os detalhes do veiculo existe um link que abre o google maps nas coordenadas do veiculo.
+
+- ✅ Filtro pela placa do veiculo e pelo numero de frota.
+
+
+## Coverage de Testes
+
+[<img src="./public/screens/coverage.png"/>]()
+
+
+## Tecnologias utilizadas
+
+- Nextjs
+- React
+- Typescript
+- Tailwindcss
+- React Query
+- React Hook Form
+- Zod
+- Axios
+- Jest / React Testing Library
+- Shadcn
+
+## Variáveis de Ambiente
+
+Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de ambiente no seu .env.local copie o .env.example e faça o setup no google console para obter suas credencias do google
+
+`API_URL` <br/>
+`TOKEN_API_KEY` <br/>
+`NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` <br/>
+`NEXT_PUBLIC_GOOGLE_MAPS_MAP_ID`
+
+## Rodando Localmente
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+$ git clone https://github.com/zkauansantos/vehicles-google-maps-visualizer.git
+
+$ cd vehicles-google-maps-visualizer
+
+$ pnpm install
+
+$ pnpm dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
