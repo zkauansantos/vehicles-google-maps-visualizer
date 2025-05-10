@@ -35,7 +35,7 @@ export function useFilterVehiclesModel() {
     const { unsubscribe } = watch((fieldValues, { name }) => {
       const oldType = getSearchParams().type;
       const newType = fieldValues.type;
-      const isTypeFilter = name === "filter" && newType !== oldType;
+      const isTypeFilter = name === "type" && newType !== oldType;
 
       if (isTypeFilter) {
         const params = formatQueryParams({
@@ -53,10 +53,6 @@ export function useFilterVehiclesModel() {
   }, [watch, router, getSearchParams]);
 
   const onSubmit = handleSubmit((data) => {
-    if (!data.filter) {
-      return;
-    }
-
     const params = formatQueryParams({
       filter: data.filter,
       type: getSearchParams().type,

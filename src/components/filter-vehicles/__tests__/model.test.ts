@@ -118,7 +118,7 @@ describe("useFilterVehiclesModel", () => {
     act(() => {
       watchCallback(
         { type: VehicleType.OTHERS, filter: "test-filter" },
-        { name: "filter" },
+        { name: "type" },
       );
     });
 
@@ -192,25 +192,6 @@ describe("useFilterVehiclesModel", () => {
     });
 
     expect(mockReplace).toHaveBeenCalledWith(newFilterParams);
-  });
-
-  it("should not update URL when filter is empty on submission", () => {
-    (useSearchParams as jest.Mock).mockReturnValue({
-      get: () => null,
-    });
-
-    const { result } = renderHook(() => useFilterVehiclesModel());
-
-    act(() => {
-      const values = {
-        filter: "",
-        type: VehicleType.TRACKED,
-      } as unknown as BaseSyntheticEvent;
-
-      result.current.onSubmit(values);
-    });
-
-    expect(mockReplace).not.toHaveBeenCalled();
   });
 
   it("should return control, register, and onSubmit", () => {
