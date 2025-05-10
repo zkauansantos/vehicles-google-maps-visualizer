@@ -6,7 +6,7 @@ import Link from "next/link";
 import { PinMarkerTruck } from "@/app/assets/icons/pin-marker-truck";
 import type { IVehicleTracked } from "@/entities/IVehicle";
 import { cn } from "@/utils/cn";
-import { formatVehiclePlate } from "@/utils/formatters";
+import { formatDate, formatVehiclePlate } from "@/utils/formatters";
 
 interface IMapMarkersProps {
   points: IVehicleTracked[];
@@ -44,7 +44,7 @@ export function MapMarkers({
         >
           <p>Placa {formatVehiclePlate(selectedVehicle.plate)}</p>
           <p>Frota {selectedVehicle.fleet ?? "-"}</p>
-          <p>{selectedVehicle.createdAt.toString()}</p>
+          <p>{formatDate(selectedVehicle.createdAt)}</p>
 
           <Link
             className="hover:underline hover:scale-105 transition-all"
